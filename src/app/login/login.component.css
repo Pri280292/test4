@@ -1,0 +1,94 @@
+
+.auth-sidebar{
+    background-color: #f1f3f6;
+    left: 5px;
+}
+
+.login-box{
+    box-shadow: 12px 0px 20px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.login-box h3{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.illustraton-box h4{
+    font-size: 32px;
+    font-weight: bold;
+    color: #1F295D;
+}
+
+
+
+.input .input-item input:focus {
+    border: 1px solid #1F295D !important;
+  }
+  
+  .input .input-item input:focus {
+    border: 1px solid #1F295D !important;
+    outline: 0 !important;
+  }
+  
+  .input .input-item textarea:focus {
+    border: 1px solid #1F295D !important;
+  }
+  
+  .input .input-item textarea:focus {
+    border: 1px solid #1F295D !important;
+    outline: 0 !important;
+  }
+  
+  .input:focus label {
+    top: -5px;
+    font-size: 16px;
+    transition: all 0.2s ease-in;
+    pointer-events: none;
+  }
+  
+  .input input:focus ~ .floating-label {
+    top: -5px;
+    font-size: 12px;
+    background-color: #f1f3f6;
+  }
+  
+  .input input:not(:focus):valid ~ .floating-label {
+    top: -5px;
+    font-size: 12px;
+    background-color: #f1f3f6;
+  }
+  
+  .input textarea:focus ~ .floating-label {
+    top: -5px;
+    font-size: 12px;
+    background-color: #f1f3f6;
+  }
+  
+  .input textarea:not(:focus):valid ~ .floating-label {
+    top: -5px;
+    font-size: 12px;
+    background-color: #f1f3f6;
+  }
+
+
+/* .auth-sidebar{
+    .input .input-item{
+        flex-wrap: wrap;
+    }
+   
+    .input .input-item input:-webkit-autofill + label{
+        top: -5px;
+    }
+    .input .input-item input:-webkit-autofill + label{
+        font-size: 12px;
+    } 
+ } */
