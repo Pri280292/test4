@@ -1,25 +1,25 @@
- <div class="container">
-       <div class="text-center">
-           <h1>Pragmana Login Page</h1>
-       </div>
-       <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
-    
-        <div class="form-outline mb-4">
-          <input  formControlName="userId" type="text" id="userId" class="form-control" />
-          <label class="form-label" for="form1Example1">UserId</label>
-        </div>
-        <div class="form-outline mb-4">
-            <input  formControlName="tenantId" type="text" id="tenantId" class="form-control" />
-            <label class="form-label" for="form1Example2">TenantId</label>
-          </div>
-      
-       
-        <div class="form-outline mb-4">
-          <input formControlName="password"  type="password" id="form1Example2" class="form-control" />
-          <label class="form-label" for="form1Example3">Password</label>
-        </div>
-   
-        <button type="submit" class="btn btn-primary btn-block">Login</button>
-      </form>
+<div class="container">
+  <div class="text-center">
+      <h1>Pragamana Login Page</h1>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+
+   <div class="form-outline mb-4">
+     <input  formControlName="userId" type="text" id="userId" class="form-control" />
+     <label class="form-label" for="form1Example1">UserId</label>
+   </div>
+   <div class="form-outline mb-4">
+       <input  formControlName="tenantId" type="text" id="tenantId" class="form-control" />
+       <label class="form-label" for="form1Example2">TenantId</label>
+     </div>
+ 
+  
+   <div class="form-outline mb-4">
+     <input formControlName="password"  type="password" id="form1Example2" class="form-control" />
+     <label class="form-label" for="form1Example3">Password</label>
+   </div>
+
+   <button type="submit" class="btn btn-primary btn-block">Login</button>
+ </form>
 </div> 
 

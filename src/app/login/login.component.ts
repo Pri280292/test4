@@ -21,18 +21,19 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
-      userId:[''],
-      tenantId:[''],
-      password:['']
+      userId:'',
+      tenantId:'',
+      password:''
     })
   }
   login(data:any){
     
     this.userData.saveUserDatainfo(data).subscribe((result)=>{
-      return data.userId===this.loginForm.value.userId && data.password===this.loginForm.value.password;
-
+      localStorage.clear();
+        localStorage.setItem("tokenn", JSON.parse(JSON.stringify(result)).jwtResponse.token);
+        localStorage.setItem("tenantId", data.tenantId);   
+        this.router.navigate(['users']);    
       })
-      this.router.navigate(['users']);
     }
    
   }
