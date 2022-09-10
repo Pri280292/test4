@@ -1,0 +1,17 @@
+
+<h1>Users Info</h1> 
+   <table class="table table-bordered" >
+     <thead>
+       <tr>
+         <th>User Department</th>
+         <th>User Phone No</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor = "let userdetail of user">
+         <td>{{userdetail.department}}</td>
+         <td>{{userdetail.phoneNo}}</td>
+      </tr>
+       
+     </tbody>
+   </table> 

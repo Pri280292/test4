@@ -9,9 +9,10 @@
      </thead>
      <tbody>
        <tr *ngFor = "let user of users1">
-         <td>{{user.userId}}</td>
-         <td>{{user.firstName}}</td>
-      </tr>
+        <td><button (click)="getDetail()">{{user.userId}}</button></td>
+        <td>{{user.firstName}}</td>
+         
+       </tr>
        
      </tbody>
    </table>

@@ -1,6 +1,11 @@
 
 import { Injectable } from '@angular/core';
 import{HttpClient,HttpHeaders} from'@angular/common/http'
+import { Observable } from 'rxjs';
+
+interface userInfo{
+  userId:any;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +31,14 @@ export class UserDataServicesService {
       const header2=new HttpHeaders({'Authorization': t , 'tenantId': tenantId});
       console.log("headers: ", header2)
       return this.http.get(this.url+"/userList", {headers: header2});
+   }
+
+   getUserList(tenantId:any,token:any):Observable<userInfo>{
+    let t = 'Bearer '+ token;
+    console.log("t: ", t);
+      const header3=new HttpHeaders({'Authorization': t , 'tenantId': tenantId});
+      console.log("headers: ", header3)
+      return this.http.get<userInfo>(this.url+"/Id",{headers:header3});
    }
 
 }

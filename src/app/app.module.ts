@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UsersComponent
+    UsersComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

@@ -34,6 +34,11 @@ export class UsersComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
+  getDetail(){
+    
+    this.router.navigate(['user-list'])
+  }
+
 
 }
   function ngOnInit() {
