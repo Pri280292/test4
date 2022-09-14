@@ -34,8 +34,8 @@ export class UsersComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
-  getDetail(){
-    
+  getDetail(userId:any){
+    console.log("UserId",userId)
     this.router.navigate(['user-list'])
   }
 

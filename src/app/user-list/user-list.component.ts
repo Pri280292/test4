@@ -1,6 +1,7 @@
-import { Token } from '@angular/compiler';
+import { identifierName, Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { observable } from 'rxjs';
 import { UserDataServicesService } from '../services/user-data-services.service';
 
 
@@ -20,12 +21,13 @@ export class UserListComponent implements OnInit {
 
    console.log("tenantId: " , tenantId);
   console.log("token: ", token);
- 
+  //const userId=user.id;
 
-    this.userData.getUsers(tenantId,token).subscribe((result) => {
+    this.userData.getUserList(tenantId,token,this.user.userId).subscribe((result) => {
       this.user=result;
       console.log(result);
     });
+  
   }
 
 }
