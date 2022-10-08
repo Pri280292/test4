@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup} from '@angular/forms'
+import {FormBuilder,FormGroup,Validators,FormControl} from '@angular/forms'
 import { Router } from '@angular/router';
 import { UserDataServicesService } from '../services/user-data-services.service';
 
@@ -25,6 +25,10 @@ export class LoginComponent implements OnInit {
       tenantId:'',
       password:''
     })
+  }
+
+  get f(){
+    return this.loginForm.controls;
   }
   login(data:any){
     

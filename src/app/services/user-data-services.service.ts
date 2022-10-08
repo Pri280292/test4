@@ -28,12 +28,12 @@ export class UserDataServicesService {
       return this.http.get(this.url+"/userList", {headers: header2});
    }
 
-   getUserList(tenantId:any,token:any,userId:any){
+   getUserList(tenantId:any,token:any,id:any){
     let t = 'Bearer '+ token;
     console.log("t: ", t);
       const header3=new HttpHeaders({'Authorization': t , 'tenantId': tenantId});
       console.log("headers: ", header3)
-      return this.http.get(this.url+"/userList"+userId,{headers:header3});
+      return this.http.get(this.url+`GET/users/${id}`,{headers:header3});
    }
 
 }

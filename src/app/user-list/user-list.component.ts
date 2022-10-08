@@ -23,9 +23,12 @@ export class UserListComponent implements OnInit {
   console.log("token: ", token);
   //const userId=user.id;
 
-    this.userData.getUserList(tenantId,token,this.user.userId).subscribe((result) => {
+
+    this.userData.getUserList(tenantId,token,this.user.id).subscribe((result) => {
       this.user=result;
+      console.log( "user:"+this.user.id)
       console.log(result);
+      
     });
   
   }

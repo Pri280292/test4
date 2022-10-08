@@ -5,21 +5,39 @@
   <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
 
    <div class="form-outline mb-4">
-     <input  formControlName="userId" type="text" id="userId" class="form-control" />
+     <input  formControlName="userId" type="text" id="userId" class="form-control"  required/>
      <label class="form-label" for="form1Example1">UserId</label>
+     <div *ngIf="loginForm.controls['userId'].invalid && (loginForm.controls['userId'].dirty ||loginForm.controls['userId'].touched)" class="alert alert-danger">
+      <div *ngIf="loginForm.controls['userId'].errors">
+         UserId is required
+      </div>
+     </div>
+     
    </div>
+   
+   
    <div class="form-outline mb-4">
-       <input  formControlName="tenantId" type="text" id="tenantId" class="form-control" />
+       <input  formControlName="tenantId" type="text" id="tenantId" class="form-control"required />
        <label class="form-label" for="form1Example2">TenantId</label>
+       <div *ngIf="loginForm.controls['tenantId'].invalid && (loginForm.controls['tenantId'].dirty || loginForm.controls['tenantId'].touched)" class="alert alert-danger">
+        <div *ngIf="loginForm.controls['tenantId'].errors">
+           TenantId is required
+        </div>
+       </div>
      </div>
  
   
    <div class="form-outline mb-4">
-     <input formControlName="password"  type="password" id="form1Example2" class="form-control" />
+     <input formControlName="password"  type="password" id="password" class="form-control" required/>
      <label class="form-label" for="form1Example3">Password</label>
+     <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty ||loginForm.controls['password'].touched)" class="alert alert-danger">
+      <div *ngIf="loginForm.controls['password'].errors">
+         Password is required
+      </div>
+     </div>
    </div>
 
-   <button type="submit" class="btn btn-primary btn-block">Login</button>
+   <button type="submit" class="btn btn-primary btn-block" [disabled]="(loginForm.controls['userId'].value=='' && loginForm.controls['tenantId'].value=='')">Login</button>
  </form>
 </div> 
 
